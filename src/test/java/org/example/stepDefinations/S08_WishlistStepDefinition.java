@@ -3,6 +3,7 @@ package org.example.stepDefinations;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.example.pages.P08_WishlistPage;
+import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
 public class S08_WishlistStepDefinition {
@@ -24,6 +25,14 @@ public class S08_WishlistStepDefinition {
         soft.assertTrue(wish.getSuccessTxt().getText().contains("The product has been added to your wishlist"),"text is wrong");
         soft.assertEquals(wish.hexColor(),"#4bb07a","background color isn't correct");
         soft.assertAll();
+
+    }
+
+    @Then("product is added to the wishlist and and number of products is more than {int}.")
+    public void productIsAddedToTheWishlistAndAndNumberOfProductsIsMoreThan(int arg0) {
+
+        wish.click_wish_button();
+        Assert.assertTrue(wish.getWishCount()>0,"count in wish button is not working");
 
     }
 }

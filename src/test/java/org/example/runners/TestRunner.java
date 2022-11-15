@@ -6,18 +6,15 @@ import org.openqa.selenium.WebDriver;
 
 @CucumberOptions(
         features = "src/main/resources/features",
-        glue = {"stepDefinations","Hooks"},
+        glue = "org.example.stepDefinations",
         //,dryRun = true,
-        monochrome = true,
-        tags = "smoke",
+//        monochrome = true,
+        tags = "@smoke",
         plugin = {"pretty",
                 "html:target/cucumber.html",
-                "html:target/cucumber-report/cucumber.html",
-                "json:target/cucumber-report/cucumber.json",
                 "json:target/cucumber.json",
                 "junit:target/cukes.xml",
-                "rerun:target/rerun.txt",
-                "rerun:target/failed_scenarios.txt"}
+                "rerun:target/rerun.txt"}
 
 )
 

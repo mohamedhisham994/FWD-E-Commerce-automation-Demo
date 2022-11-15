@@ -28,7 +28,7 @@ driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 @After
     public void closeBrowser() throws InterruptedException {
-    Thread.sleep(3000);
+    Thread.sleep(1000);
     driver.quit();
 }
 

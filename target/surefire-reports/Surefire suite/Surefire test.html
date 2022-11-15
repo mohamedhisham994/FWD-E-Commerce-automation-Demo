@@ -1,0 +1,277 @@
+<html>
+<head>
+<title>TestNG:  Surefire test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Surefire test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>15/4/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Nov 15 23:25:50 EET 2022</td>
+</tr>
+<tr><td>Total time:</td><td>370 seconds (370411 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "RSS icon in the follow us works correctly", "User can open FaceBook, Twitter, Rss & Youtube from follow Us"</td>
+<td><div><pre>java.lang.IndexOutOfBoundsException: Index 1 out of bounds for length 1
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+	at java.base/java.util.Objects.checkIndex(Objects.java:385)
+	at java.base/java.util.ArrayList.get(ArrayList.java:427)
+	at org.example.pages.P07_FollowUsPage.getWindowUrl(P07_FollowUsPage.java:22)
+	at org.example.stepDefinations.S07_followUsStepDefinition.userIsRedirectedToANewRSSIcon(S07_followUsStepDefinition.java:46)
+	at ✽.user is redirected to a new RSS icon(file:///D:/E-CommerceAutomationProject/src/main/resources/features/F07_followUs.feature:18)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1611382686", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1611382686'><pre>java.lang.IndexOutOfBoundsException: Index 1 out of bounds for length 1
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+	at java.base/java.util.Objects.checkIndex(Objects.java:385)
+	at java.base/java.util.ArrayList.get(ArrayList.java:427)
+	at org.example.pages.P07_FollowUsPage.getWindowUrl(P07_FollowUsPage.java:22)
+	at org.example.stepDefinations.S07_followUsStepDefinition.userIsRedirectedToANewRSSIcon(S07_followUsStepDefinition.java:46)
+	at ✽.user is redirected to a new RSS icon(file:///D:/E-CommerceAutomationProject/src/main/resources/features/F07_followUs.feature:18)
+</pre></div></td>
+<td>15</td>
+<td>org.example.runners.TestRunner@65d6b83b</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could login with valid email and password", "F02_Login | users could use login functionality to use their accounts"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@href=&quot;/logout&quot;]&quot;}
+  (Session info: chrome=107.0.5304.88)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.6.0&apos;, revision: &apos;79f1c02ae20&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d61b3425d133955e42cede157ccd6404, findElement {using=xpath, value=//a[@href=&quot;/logout&quot;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.88, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\Toshiba\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:52385}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52385/devtoo..., se:cdpVersion: 107.0.5304.88, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d61b3425d133955e42cede157ccd6404
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.example.pages.P02_Login_Page.LogOutIsEnabled(P02_Login_Page.java:39)
+	at org.example.stepDefinations.S02_loginStepDefinition.userIsLoggedInSuccessfully(S02_loginStepDefinition.java:33)
+	at ✽.user is logged in successfully(file:///D:/E-CommerceAutomationProject/src/main/resources/features/F02_Login.feature:8)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace68866931", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace68866931'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@href=&quot;/logout&quot;]&quot;}
+  (Session info: chrome=107.0.5304.88)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.6.0&apos;, revision: &apos;79f1c02ae20&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d61b3425d133955e42cede157ccd6404, findElement {using=xpath, value=//a[@href=&quot;/logout&quot;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.88, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\Toshiba\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:52385}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52385/devtoo..., se:cdpVersion: 107.0.5304.88, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d61b3425d133955e42cede157ccd6404
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.example.pages.P02_Login_Page.LogOutIsEnabled(P02_Login_Page.java:39)
+	at org.example.stepDefinations.S02_loginStepDefinition.userIsLoggedInSuccessfully(S02_loginStepDefinition.java:33)
+	at ✽.user is logged in successfully(file:///D:/E-CommerceAutomationProject/src/main/resources/features/F02_Login.feature:8)
+</pre></div></td>
+<td>33</td>
+<td>org.example.runners.TestRunner@65d6b83b</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "when user clicks on product in first slider, product page is opened", "user can click on the product in the home slider"</td>
+<td><div><pre>java.lang.AssertionError: nokia page isn&apos;t opened after clicking on 1st slider expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]
+	at org.example.stepDefinations.S06_homeSlidersStepDefinition.thePageOfTheProductWillOpenNOKIA(S06_homeSlidersStepDefinition.java:20)
+	at ✽.the page of the product will open ( NOKIA)(file:///D:/E-CommerceAutomationProject/src/main/resources/features/F06_homeSliders.feature:7)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1641418296", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1641418296'><pre>java.lang.AssertionError: nokia page isn&apos;t opened after clicking on 1st slider expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.example.stepDefinations.S06_homeSlidersStepDefinition.thePageOfTheProductWillOpenNOKIA(S06_homeSlidersStepDefinition.java:20)
+	at ✽.the page of the product will open ( NOKIA)(file:///D:/E-CommerceAutomationProject/src/main/resources/features/F06_homeSliders.feature:7)
+</pre></div></td>
+<td>12</td>
+<td>org.example.runners.TestRunner@65d6b83b</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "when user clicks on product in second slider, product page is opened", "user can click on the product in the home slider"</td>
+<td><div><pre>java.lang.AssertionError: iphone page isn&apos;t opened after clicking on 2nd slider expected [https://demo.nopcommerce.com/iphone] but found [https://demo.nopcommerce.com/]
+	at org.example.stepDefinations.S06_homeSlidersStepDefinition.thePageOfTheProductWillOpenIphone(S06_homeSlidersStepDefinition.java:32)
+	at ✽.the page of the product will open (Iphone)(file:///D:/E-CommerceAutomationProject/src/main/resources/features/F06_homeSliders.feature:12)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1638429542", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1638429542'><pre>java.lang.AssertionError: iphone page isn&apos;t opened after clicking on 2nd slider expected [https://demo.nopcommerce.com/iphone] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.example.stepDefinations.S06_homeSlidersStepDefinition.thePageOfTheProductWillOpenIphone(S06_homeSlidersStepDefinition.java:32)
+	at ✽.the page of the product will open (Iphone)(file:///D:/E-CommerceAutomationProject/src/main/resources/features/F06_homeSliders.feature:12)
+</pre></div></td>
+<td>18</td>
+<td>org.example.runners.TestRunner@65d6b83b</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "check that number of products in wishList is more than 0 after clicking on wish icon .", "user can save products in wishList"</td>
+<td></td>
+<td>17</td>
+<td>org.example.runners.TestRunner@65d6b83b</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "product is added to wishlist after user clicks on wishlist icon.", "user can save products in wishList"</td>
+<td></td>
+<td>18</td>
+<td>org.example.runners.TestRunner@65d6b83b</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user can search with product", "user can search with either product or Serial Number."</td>
+<td></td>
+<td>17</td>
+<td>org.example.runners.TestRunner@65d6b83b</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could search for product using sku", "user can search with either product or Serial Number."</td>
+<td></td>
+<td>13</td>
+<td>org.example.runners.TestRunner@65d6b83b</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user can search with product", "user can search with either product or Serial Number."</td>
+<td></td>
+<td>14</td>
+<td>org.example.runners.TestRunner@65d6b83b</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could login with invalid email and password", "F02_Login | users could use login functionality to use their accounts"</td>
+<td></td>
+<td>18</td>
+<td>org.example.runners.TestRunner@65d6b83b</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user can search with product", "user can search with either product or Serial Number."</td>
+<td></td>
+<td>21</td>
+<td>org.example.runners.TestRunner@65d6b83b</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user can select any main category", "user can hover and select randomly any subCategories"</td>
+<td></td>
+<td>17</td>
+<td>org.example.runners.TestRunner@65d6b83b</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "when user choose EURO, all prices should appear in Euro.", "F03_Currency of the product is set as choosen"</td>
+<td></td>
+<td>17</td>
+<td>org.example.runners.TestRunner@65d6b83b</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could search for product using sku", "user can search with either product or Serial Number."</td>
+<td></td>
+<td>13</td>
+<td>org.example.runners.TestRunner@65d6b83b</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user can register", "user should be register to application"</td>
+<td></td>
+<td>35</td>
+<td>org.example.runners.TestRunner@65d6b83b</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Youtube icon in the follow us works correctly", "User can open FaceBook, Twitter, Rss & Youtube from follow Us"</td>
+<td></td>
+<td>28</td>
+<td>org.example.runners.TestRunner@65d6b83b</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Facebook icon in the follow us works correctly", "User can open FaceBook, Twitter, Rss & Youtube from follow Us"</td>
+<td></td>
+<td>21</td>
+<td>org.example.runners.TestRunner@65d6b83b</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could search for product using sku", "user can search with either product or Serial Number."</td>
+<td></td>
+<td>16</td>
+<td>org.example.runners.TestRunner@65d6b83b</td></tr>
+<tr>
+<td title='org.example.runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.example.runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Twitter icon in the follow us works correctly", "User can open FaceBook, Twitter, Rss & Youtube from follow Us"</td>
+<td></td>
+<td>16</td>
+<td>org.example.runners.TestRunner@65d6b83b</td></tr>
+</table><p>
+</body>
+</html>
